@@ -1,0 +1,53 @@
+.boxq{
+	width:100%;
+	height:420px;
+	margin:0 auto;
+	position:relative;
+}
+.boxq>.ul{
+	width:100%;
+	height:420px;
+	margin:0 auto;
+	background:#f5f5f5;
+}
+.boxq>ul>li{
+	list-style:none;
+	width:100%;
+	height:420px;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+}
+.ul>li:nth-child(1){
+		opacity:1;
+}
+.boxq>ul>li>a{
+		width:100%;
+		height:420px;
+		float:left;
+}
+.boxq>ul li .a1{
+	background:url(../img/111.jpg) no-repeat center center;
+}
+.boxq>ul li .a2{
+	background:url(../img/222.jpg) no-repeat center center;
+}
+.boxq>ul li .a3{
+	background:url(../img/333.jpg) no-repeat center center;
+}
+.boxq>ul li .a4{
+	background:url(../img/444.jpg) no-repeat center center;
+}
+.boxq>ul li .a5{
+	background:url(../img/555.jpg) no-repeat center center;
+}
+.boxq>ul li .a6{
+	background:url(../img/666.jpg) no-repeat center center;
+}
+.boxq>ul li .a7{
+	background:url(../img/777.jpg) no-repeat center center;
+}
+.boxq>ul li .a8{
+	background:url(../img/888.jpg) no-repeat center center;
+}

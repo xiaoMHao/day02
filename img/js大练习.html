@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0206)file:///C:/%E6%96%87%E4%BB%B6/%E7%AC%AC%E5%9B%9B%E4%B8%AA%E6%9C%88JS/js/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E5%AF%B9%E8%B1%A12019-8-14/js%E5%A4%A7%E7%BB%83%E4%B9%A0%E5%A4%87%E6%88%98%E8%80%83%E8%AF%95.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>js大练习</title>
+  <style type="text/css">
+  </style>
+ </head>
+ <body>
+	<!-- <div id="box">
+		<img src="img/1.png" alt="" id="img" />
+	</div>
+		<button id="jia">+</button>
+		<button id="jian">-</button> -->
+
+
+		<div id="box"></div>
+		<div>
+			<button id="guan">关闭</button>
+			<button id="kai">开始</button>
+		</div>
+ 
+ <script type="text/javascript">
+	/*
+		数据类型转换  if判断
+			1、价格联动 + - 进行 + - 计算
+			2、简易 计算器
+		自增自减  if 判断
+			1、图片的放大缩小
+			2、切换图片的路径
+		if判断
+			3、身材系数 练习
+			4、成绩的优良差
+		循环语句
+			1、九九乘法表
+			2、质数
+			3、1000~2200  闰年个数
+			4、300m球的弹起次数  弹起原来高度的70%
+			5、0.01的纸折叠珠穆朗玛峰的高度
+			6、中美GDP 赶超美国需要的年数
+			7、1.2 涨到1.8需要几年
+		函数
+			1、保存一个人的基础信息的到对象里的方法
+			2、判断是不是质数的方法
+			3、100以内的偶数 存到数组的方法
+			4、在数组中查找一个元素的下标的方法
+			5、九九乘法表打印一行的方法
+			6、通过一个商品对象生成html商品页面结构
+		数组
+			数组去重
+			冒泡排序
+			验证码  随机数
+			点名器  随机数
+			倒计时  时间对象  定时器
+			时间  时间对象  定时器
+			字符串  查找某个字符的个数
+			数组查找某个元素的个数
+			随机生成双色球
+		//预热课程
+		点击按钮改变 元素的样式
+		价格联动  + - 进行几个计算
+		图片的放大 缩小
+		切换图片的路径 字符串拼接
+		切换图片的路径  数组的获取路径下标
+	*/	
+	/*2、简易 计算器
+		var a=prompt("请输入数字")-0;
+		var b=prompt("请输入 + - * / ");
+		var c=prompt("请输入数字")-0;
+		switch (b)
+		{
+		case "+":
+		alert (a+c)
+		break;
+		case "-":
+		alert (a-c)
+		break;
+		case "*":
+		alert (a*c)
+		break;
+		case "/":
+		alert (a/c)
+		break;
+	}*/
+	//1、切换图片的路径
+	/*var k=1
+	document.getElementById("jia").onclick=function(){
+		k++
+		if (k>6)
+		{
+			k=1
+		}
+		document.getElementById("img").src="img/"+k+".png";
+	}
+	document.getElementById("jian").onclick=function(){
+		k--
+		if (k<1)
+		{
+			k=6
+		}
+		document.getElementById("img").src="img/"+k+".png";
+	}*/
+	//图片的放大缩小
+	/*var a=200;
+	document.getElementById("jia").onclick=function(){
+		a+=50
+		if (a>800)
+		{
+			a=200
+		}
+		document.getElementById("img").style="width:"+a+"px"
+	}*/
+	//1、九九乘法表
+	/*for (var i=0;i<=9 ;i++)
+	{
+		for (var a=1;a<=i ;a++ )
+		{
+			document.write( a + "x" + i + "=" + i * a + " ")
+		}
+		document.write("<br/>")
+	}*/
+	/*2、质数*/
+		function on(a){
+			zs=true
+			for (var i=2;i<a ;i++ )
+			{
+				if (i%a==0)
+				{
+				zs=false
+				}
+			}
+			return zs
+		}
+		console.log(on(prompt("请输入数字")))
+	/*3、100以内的偶数 存到数组的方法
+		var arr=[]
+		function fu(){
+		for (var i=0;i<100 ;i++)
+		{
+			if (i%2==0)
+			{
+				arr.push(i)
+			}
+		}
+	}
+	fu()
+	console.log(arr)
+*/
+	/*0.01毫米的纸折叠珠穆朗玛峰的高度
+		var  i=0.0001
+		var gs=0;
+		while (i<=8848)
+		{
+			i=i*2
+			gs++
+		}
+		console.log(gs)
+	*/
+	/*4、300m球的弹起次数  弹起原来高度的70%
+		var g=0;
+		for (var a=300;a>1 ;a*=0.7 )
+		{
+			g++
+		}
+		console.log(g)
+	*/
+	/*6、中美GDP 赶超美国需要的年数
+		中国目前GDP   49089.82   每年增长1.08倍
+		美国 GDP        142562.75   每年增长1.02倍*/
+		/*var z=49089.82;
+		var m=142562.75;
+		var g=0;
+		while (z<m)
+		{
+			z=z*1.08;
+			m=m*1.02;
+			g++
+		}
+		console.log(g)
+	*/
+	//7、1.2 涨到1.8需要几年
+		/*var a=1.1
+		var g=0;
+		while (a<=1.8)
+		{
+			a*=1.02
+			g++
+		}
+		console.log(g)
+	*/
+	//保存一个人的基础信息的到对象里的方法
+	/*var obj={
+		name:"石春龙",
+		xb:"女",
+		sg:"180",
+		tz:"90g",
+		fs:"黄",
+		aihao:"打牌抽烟喝酒打架",		
+	}
+	console.log(obj)
+	*/
+	//判断是不是质数的方法
+	/*var arr=[]
+	function fn(){
+		
+		for (var i=2;i<100 ;i++ ){
+			var zs="质数"
+			for (var a=2;a<i ;a++ )
+			{
+				if (i%a==0)
+				{
+					zs="不是质数"
+				}
+			}	
+			if (zs=="质数"){
+				arr.push(i)
+				}
+		}		
+	}
+	fn()
+	console.log(arr)
+*/
+	//4、在数组中查找一个元素的下标的方法
+	/*var arr=["d","j","a","k","s","j","f","b","k","x","m","z","m","A"]
+	var arr1=arr.indexOf("k",1)
+	console.log(arr1)
+*/
+	//九九乘法表打印一行的方法
+	/*function fu(a){
+		for (var i=1;i<a ;i++ )
+		{
+			document.write(i + "x" + a + "=" + i*a + " ")
+		}
+	}
+	fu(prompt("请输入数字"))
+	*/
+
+	//数组去重
+	/*var arr=[1,2,3,2,3,15,15,25,24,2,1,5,88,24]
+	var arr1=[];
+		for (var i=0;i<arr.length ; i++)
+		{
+			if (arr1.indexOf(arr[i])==-1)
+			{
+				arr1.push(arr[i])
+			}
+		}
+		console.log(arr1)
+	*/
+	//冒泡排序
+	/*var arr=[1,3,24,5,6,78,2,13,4,234345,13445,678,9]
+	var arr1;
+	for (var i=arr.length;i>0 ;i-- )
+	{
+		for (var a=0;a<i ;a++ )
+		{
+			if (arr[a]>arr[a+1])
+			{
+				arr1=arr[a]
+				arr[a]=arr[a+1]
+				arr[a+1]=arr1
+			}
+		}
+	}
+	console.log(arr)
+*/
+	//验证码  随机数
+	/*var arr=[]
+	var str='';
+	for (var i=48;i<122 ;i++ )
+	{
+		if (i>=48&&i<=57 || i>=65&&i<=90 || i>=97&&i<=122)
+		{
+			arr.push(String.fromCharCode(i))
+		}
+	}
+	while (str.length<4)
+	{
+		var xb=Math.floor(Math.random()*(arr.length+0)+0)
+		str+=arr[xb];
+	}
+	console.log(str)
+	console.log(arr)
+*/
+	//点名器  随机数
+	/*var  a=["张红保",
+			"王春凯",
+			"吉芬奇",
+			"张嘉轩",
+			"张家浩",
+			"刘鹏",
+			"邓景良",
+			"薛翼腾",
+			"赵志伟",
+			"隋坤洪",
+			"周渤霖",
+			"李慧哲",
+			"刘昕瑜",
+			"石春龙",
+			"赵元力",
+			"高雅琨",
+			"杨倩倩",
+			"薛晓莹",
+			"肖孟豪",
+			"姚文罡",
+			"霍卫华",
+			"庄建伟",
+			"贾岩飞",
+			"郭鹏昌",
+			"史江云",
+			"高志明",
+			"郑亮"
+		]
+	function fn(){
+		var b=Math.floor(Math.random()*(a.length-0)+0)
+		document.getElementById("box").innerHTML=a[b]
+	}
+	
+	var timer=setInterval(function(){
+		fn()
+	},10)
+	var dian=document.getElementById("guan").onclick=function(){
+		clearInterval(timer)
+	}
+	var dian1=document.getElementById("kai").onclick=function(){
+			clearInterval(timer)
+		timer=setInterval(function(){
+			fn()72
+		},10)
+	}*/
+			//字符串  查找某个字符的个数
+			//数组查找某个元素的个数
+
+		/*	var a=[1,2,3,,5.4,5,14.1,8,1.8,28,8,9,4,1,2,8,8,8,8,8,8,8,8,]
+			var b=0;
+			var c=[];
+			for (var i=0;i<a.length ;i++ )
+			{
+				if (a[i]==8)
+				{
+					b+=1
+					c.push(i)
+				}
+			}
+			console.log(c)
+			console.log(b)*/
+ </script>
+
+</body></html>
